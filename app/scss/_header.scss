@@ -20,13 +20,31 @@
     > span {
       display: block;
       width: 26px;
-      height: 2px;
+      height: 0.165rem;
       background: $darkblue;
+      transition: all 400ms ease-in-out;
       
-      &:not(:last-child) {
-        margin-bottom: 3px;
+      &:not(:nth-child(3)) {
+        margin-bottom: 0.3125rem;
       }
     }
+    
+    &.open {
+      
+      > span:first-child{
+        transform: rotate(40deg);
+        transform-origin: top left;
+      }
+      > span:nth-child(2){
+        opacity: 0;
+      }
+      > span:last-child{
+        transform: rotate(-40deg);
+        transform-origin: bottom left;
+      }
+
+    }
+    
   }
 
   &__links {
