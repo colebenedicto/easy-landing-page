@@ -5,12 +5,20 @@ html {
 
 *, *::after, *::before {
   box-sizing: inherit;
+  color: $grayishblue;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Public sans', sans-serif;
+  font-size: $font-med;
+  font-weight: 300;
+  color: $grayishblue;
   line-height: 1.3;
 }
 
@@ -27,5 +35,31 @@ body {
 
   &-ai-c {
     align-items: center;
+  }
+}
+
+//Button
+button, .button {
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to right, $limegreen, $brightcyan);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: $font-sm;
+}
+
+//Visibilty
+
+.hide_for_mobile {
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+
+.hide_for_desktop {
+  @include breakpoint-up(large){
+    display: none;
   }
 }

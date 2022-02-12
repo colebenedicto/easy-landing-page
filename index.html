@@ -17,25 +17,31 @@
 </head>
 <body>
 
-  <header>
-    <nav class="flex">
-      <a href="/" class="logo">
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a href="/" class="logo header__logo">
         <img src="./images/logo.svg" alt="">
       </a>
-      <a href="#" class="hamburger">
+      <a href="#" class="hamburger header__menu hide_for_desktop">
         <span></span>
         <span></span>
         <span></span>
       </a>
+
+      <div class="header__links hide_for_mobile">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+
+      <a class="button header__cta hide_for_mobile" href="#">Request Invite</a>
     </nav>
   </header>
   <!-- 
 
-  Home
-  About
-  Contact
-  Blog
-  Careers
+
 
   Request Invite
 
