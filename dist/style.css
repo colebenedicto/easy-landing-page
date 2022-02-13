@@ -1,3 +1,69 @@
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 400ms ease-in-out forwards;
+          animation: fade-in 400ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 400ms ease-in-out forwards;
+          animation: fade-out 400ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -72,6 +138,38 @@ button, .button {
   }
 }
 
+.header.open .overlay {
+  display: block;
+}
+
+.header.open .header__menu > span:first-child {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__menu > span:last-child {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.header .overlay {
+  position: fixed;
+  top: 3.75rem;
+  left: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
+  background-image: linear-gradient(#2d314d, transparent);
+}
+
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -97,24 +195,6 @@ button, .button {
 
 .header__menu > span:not(:nth-child(3)) {
   margin-bottom: 0.3125rem;
-}
-
-.header__menu.open > span:first-child {
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.header__menu.open > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__menu.open > span:last-child {
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
 }
 
 .header__links a {
