@@ -21,9 +21,13 @@ body {
   color: $grayishblue;
   line-height: 1.3;
 
-  &.noscroll {
+  &.noscroll { // CSS for not allowing scroll while mobile menu is open. Added via JS
     overflow: hidden;
   }
+}
+
+h1, h2, h3 {
+  margin-top: 0rem;
 }
 
 .flex {
@@ -44,12 +48,40 @@ body {
 
 // Spacing
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;  
+  }
+  &--px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &--py {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+  &--pt {
+    padding-top: 2.25rem;
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 2.25rem;
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
 }
 
 //Button
-button, .button {
+.button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: linear-gradient(to right, $limegreen, $brightcyan);
   color: white;
@@ -58,6 +90,12 @@ button, .button {
   cursor: pointer;
   font-weight: 400;
   font-size: $font-sm;
+  color: $white;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 //Visibilty
