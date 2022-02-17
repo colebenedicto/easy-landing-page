@@ -20,6 +20,10 @@ body {
   font-weight: 300;
   color: $grayishblue;
   line-height: 1.3;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 .flex {
@@ -36,6 +40,12 @@ body {
   &-ai-c {
     align-items: center;
   }
+}
+
+// Spacing
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 //Button

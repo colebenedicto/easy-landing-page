@@ -7,7 +7,7 @@
       display: block;
     }
 
-    .header__menu {
+    .header__toggle {
       > span:first-child{
         transform: rotate(40deg);
         transform-origin: top left;
@@ -24,7 +24,7 @@
   
   .overlay {
     position: fixed;
-    top: 3.75rem;
+    top: 0rem;
     left: 0rem;
     bottom: 0rem;
     right: 0rem;
@@ -32,7 +32,10 @@
   }
 
   nav {
-    padding: 1.0625rem 1.5rem;
+    position: relative;
+    background-color: $white;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 
   &__logo {
@@ -46,7 +49,7 @@
     margin: 0;
   }
 
-  &__menu { //mobile_menu
+  &__toggle { //mobile_menu toggle
 
     > span {
       display: block;
@@ -60,6 +63,24 @@
       }
     }
     
+  }
+
+  &__menu {
+    background: $white;
+    margin-top: 1.5rem;
+    padding: 1.625rem 0; 
+    border-radius: 5px;
+    position: absolute;
+    width: calc(100% -  3rem);
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      display: block;
+      color: $darkblue;
+      padding: 0.625rem;
+      text-align: center;
+    }
   }
 
   &__links {
