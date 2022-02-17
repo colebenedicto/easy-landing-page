@@ -340,6 +340,19 @@ h1, h2, h3 {
   min-height: 17.5rem;
 }
 
+@media (max-width: 63.9375em) {
+  .hero__img {
+    background-image: url(/images/bg-intro-mobile.svg);
+  }
+}
+
+@media (min-width: 40em) {
+  .hero__img {
+    min-height: 25rem;
+    background-position: center 55%;
+  }
+}
+
 @media (min-width: 64em) {
   .hero__img {
     -webkit-box-flex: 3;
@@ -352,22 +365,18 @@ h1, h2, h3 {
   }
 }
 
-.hero__img::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(/images/bg-intro-desktop.svg);
-  background-size: 93%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 @media (min-width: 64em) {
   .hero__img::before {
-    background-size: 100%;
+    content: "";
+    position: absolute;
     width: 150%;
-    background-position: center center;
+    height: 93%;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
   }
 }
 
@@ -382,8 +391,15 @@ h1, h2, h3 {
   background-position: center bottom;
 }
 
+@media (min-width: 40em) {
+  .hero__img::after {
+    background-size: 57%;
+  }
+}
+
 @media (min-width: 64em) {
   .hero__img::after {
+    height: 110%;
     background-size: 105%;
     -webkit-transform: translateX(33%);
             transform: translateX(33%);
