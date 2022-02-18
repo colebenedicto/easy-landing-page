@@ -1,5 +1,5 @@
 .hero {
-  background-color: $verylightgrayishblur;
+  background-color: $verylightgrayishblue;
   
   .container {
     padding-top: 0;
@@ -81,17 +81,6 @@
     
     text-align: center;
 
-    h1 {
-      font-weight: 300;
-      font-size: 2.3125rem;
-      line-height: 1.15;
-      color: $darkblue;
-      margin-bottom: 1.5rem;
-
-      @include breakpoint-up(large) {
-        font-size: $font-xlar;
-      }
-    }
     p {
       line-height: 1.5;
       margin-bottom: 2.25rem;
