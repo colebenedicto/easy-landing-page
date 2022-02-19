@@ -20,6 +20,7 @@ body {
   font-weight: 300;
   color: $grayishblue;
   line-height: 1.3;
+  overflow-x: hidden;
 
   &.noscroll { // CSS for not allowing scroll while mobile menu is open. Added via JS
     overflow: hidden;

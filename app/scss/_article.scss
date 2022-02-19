@@ -2,6 +2,11 @@
   background-color: $verylightgrayishblue;
 }
 
+.articles h2 {
+    text-align: center;
+    border: .125rem solid yellow;
+}
+
 .article {
 
   &__grid {
