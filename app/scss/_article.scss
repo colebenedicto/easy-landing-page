@@ -1,10 +1,12 @@
 .articles {
   background-color: $verylightgrayishblue;
-}
 
-.articles h2 {
-    text-align: center;
-    border: .125rem solid yellow;
+  h2 {
+    @include breakpoint-down(medium) {
+      text-align: center;
+      padding-bottom: 1.25rem;
+    }
+  }
 }
 
 .article {
@@ -12,7 +14,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.875rem;
+    gap: 30px;
   
     @include breakpoint-up(medium) {
       grid-template-columns: repeat(2, 1fr);
@@ -25,9 +27,9 @@
   
   &__item {
     background-color: $white;
-    border-radius: .3125rem;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0rem .1875rem .75rem rgba(0, 0, 0, .15);
     transition: all 200ms ease-in-out;
 
     &:hover {
@@ -36,31 +38,31 @@
   }
 
   &__img {
-    height: 12.5rem;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   &__text {
-    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+    padding: 30px 30px 40px 30px;
     color: $grayishblue;
 
     @include breakpoint-up(medium) {
-      padding: 1.875rem 1.5625rem;
+      padding: 30px 25px;
     }
   }
 
   &__author {
-    font-size: .625rem; 
-    margin-bottom: .75rem;
+    font-size: 10px; 
+    margin-bottom: 12px;
   }
 
   &__title {
-    font-size: 1.0625rem;
+    font-size: 17px;
     line-height: 1.2;
     color: $darkblue;
-    margin-bottom: .625rem;
+    margin-bottom: 10px;
     transition: all 200ms ease-in-out;
 
     &:hover {
@@ -69,7 +71,7 @@
   }
 
   &__desc {
-    font-size: .8125rem;
+    font-size: 13px;
     line-height: 1.5;
   }
 }
