@@ -8,12 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/style.css">
   <title>Frontend Mentor | Easybank landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
@@ -115,29 +109,55 @@
 
   </section>
 
-  Latest Articles
+  <section class="articles">
+    
+    <div class="article__content container container--pall">
+      
+      <h2>Latest Articles</h2>
+      
+      <div class="article__grid">
+        <a href="#" class="article__item">
+          <div class="article__img" style="background-image: url('/images/image-currency.jpg')"></div>
+          <div class="article__text">
+            <div class="article__author">By Claire Robinson</div>
+            <div class="article__title">Receive money in any currency with no fees</div>
+            <div class="article__desc">The world is getting smaller and we’re becoming more mobile. So why should you be 
+              forced to only receive money in a single …</div>
+          </div>
+        </a>
+        <a href="#" class="article__item">
+          <div class="article__img" style="background-image: url('/images/image-restaurant.jpg');"></div>
+          <div class="article__text">
+            <div class="article__author">By Wilson Hutton</div>
+            <div class="article__title">Treat yourself without worrying about money</div>
+            <div class="article__desc">Our simple budgeting feature allows you to separate out your spending and set 
+              realistic limits each month. That means you …</div>
+          </div>
+        </a>
+        <a href="#" class="article__item">
+          <div class="article__img" style="background-image: url('/images/image-plane.jpg');"></div>
+          <div class="article__text">
+            <div class="article__author">By Wilson Hutton</div>
+            <div class="article__title">Take your Easybank card wherever you go</div>
+            <div class="article__desc">We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
+              while you’re abroad. We’ll even show you …</div>
+          </div>
+        </a>
+        <a href="#" class="article__item">
+          <div class="article__img" style="background-image: url('/images/image-confetti.jpg');"></div>
+          <div class="article__text">
+            <div class="article__author">By Claire Robinson</div>
+            <div class="article__title">Our invite-only Beta accounts are now live!</div>
+            <div class="article__desc">After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
+              It’s easy to request an invite through the site ...</div>
+          </div>
+        </a>
+      </div>
 
-  By Claire Robinson
-  Receive money in any currency with no fees
-  The world is getting smaller and we’\re becoming more mobile. So why should you be 
-  forced to only receive money in a single …
+    </div>
 
-  By Wilson Hutton
-  Treat yourself without worrying about money
-  Our simple budgeting feature allows you to separate out your spending and set 
-  realistic limits each month. That means you …
-
-  By Wilson Hutton
-  Take your Easybank card wherever you go
-  We want you to enjoy your travels. This is why we don’\t charge any fees on purchases 
-  while you’\re abroad. We’\ll even show you …
-
-  By Claire Robinson
-  Our invite-only Beta accounts are now live!
-  After a lot of hard work by the whole team, we’\re excited to launch our closed beta. 
-  It’\s easy to request an invite through the site ...
-
-  
+  </section>
+ 
 
   About Us
   Contact
@@ -154,7 +174,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-
 
   <script src="./app/js/script.js"></script>
 </body>
